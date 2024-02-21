@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Intrinsics.X86;
 
-using ConsoleApp;
+using ChallengeApp;
 
 
 Employee user1 = new Employee("Kamil", "XZY", 20);

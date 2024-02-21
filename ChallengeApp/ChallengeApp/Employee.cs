@@ -1,5 +1,5 @@
 ﻿
-namespace ConsoleApp;
+namespace ChallengeApp;
 
 class Employee
 {
