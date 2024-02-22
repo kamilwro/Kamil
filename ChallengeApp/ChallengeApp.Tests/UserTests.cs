@@ -33,5 +33,21 @@ namespace ChallengeApp.Tests
             // assert
             Assert.AreEqual(0, result);
         }
+        [Test]
+        public void WhenUserCollectedfourScores_ShouldCorrectResult()
+        {
+            // arrange
+            var user = new Employee("Ala", "XDY", 40);
+            user.AddScore(9);
+            user.AddScore(7);
+            user.AddScore(-16);
+            user.AddScore(-14);
+
+            // act
+            var result = user.Result;
+
+            // assert
+            Assert.AreEqual(-14, result);
+        }
     }
 }
