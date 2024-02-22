@@ -1,7 +1,7 @@
 ﻿
 namespace ChallengeApp;
 
-class Employee
+public class Employee
 {
     private List<int> score = new List<int>();
 
@@ -18,6 +18,7 @@ class Employee
     public void AddScore(int number)
     {
         this.score.Add(number);
+        
     }
     public int Result
     {
