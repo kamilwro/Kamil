@@ -52,7 +52,7 @@
             Assert.AreNotEqual(user1, user2);
         }
         [Test]
-        public void Test()
+        public void ReferenceTest()
         {
             // arrange
 
