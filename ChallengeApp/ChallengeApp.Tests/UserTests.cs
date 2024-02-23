@@ -22,7 +22,7 @@ namespace ChallengeApp.Tests
         public void WhenUserCollectedTreeScores_ShouldCorrectResult()
         {
             // arrange
-            var user = new Employee("Micha³", "XCY", 30);
+            var user = new Employee("Micha?", "XCY", 30);
             user.AddScore(9);
             user.AddScore(7);
             user.AddScore(-16);
