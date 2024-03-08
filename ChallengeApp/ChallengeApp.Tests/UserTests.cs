@@ -5,49 +5,50 @@ namespace ChallengeApp.Tests
     public class Tests
     {
         [Test]
-        public void WhenUserCollectedTwoScores_ShouldCorrectResult()
+        public void CheckingMethodGetStatisticMin()
         {
             // arrange
-            var user = new Employee("Kamil", "XZY", 20);
-            user.AddScore(6);
-            user.AddScore(7);
+            var employee = new Employee("Kamil", "XZY");
+            employee.AddGrade(6);
+            employee.AddGrade(7);
+            
 
             // act
-            var result = user.Result;
+            var statistics = employee.GetStatistics();
 
             // assert
-            Assert.AreEqual(13, result);
+            Assert.AreEqual(6, statistics.Min);
         }
         [Test]
-        public void WhenUserCollectedTreeScores_ShouldCorrectResult()
+        public void CheckingMethodGetStatisticMax()
         {
             // arrange
-            var user = new Employee("Micha?", "XCY", 30);
-            user.AddScore(9);
-            user.AddScore(7);
-            user.AddScore(-16);
+            var employee = new Employee("Kamil", "XZY");
+            employee.AddGrade(50);
+            employee.AddGrade(7);
+            employee.AddGrade(15);
 
             // act
-            var result = user.Result;
+            var statistic = employee.GetStatistics();
 
             // assert
-            Assert.AreEqual(0, result);
+            Assert.AreEqual(50, statistic.Max);
         }
         [Test]
-        public void WhenUserCollectedfourScores_ShouldCorrectResult()
+        public void CheckingMethodGetStatisticAverage()
         {
             // arrange
-            var user = new Employee("Ala", "XDY", 40);
-            user.AddScore(9);
-            user.AddScore(7);
-            user.AddScore(-16);
-            user.AddScore(-14);
+            var employee = new Employee("Kamil", "XZY");
+            employee.AddGrade(9);
+            employee.AddGrade(7);
+            employee.AddGrade(-16);
+            
 
             // act
-            var result = user.Result;
+            var statistic = employee.GetStatistics();
 
             // assert
-            Assert.AreEqual(-14, result);
+            Assert.AreEqual(0, statistic.Average);
         }
     }
 }
